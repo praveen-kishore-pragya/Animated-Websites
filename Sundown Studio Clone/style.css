@@ -1,0 +1,121 @@
+@font-face {
+    font-family: neue-light;
+    src: url(./resources/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neue-bold;
+    src: url(./resources/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf);
+}
+
+*{
+    font-family: neue-light;
+    
+}
+
+body{
+    /* height: 100vh; */
+    /* width: 100vw; */
+    background-color: #efeae3;
+    padding: 1vw;
+}
+
+
+/* CSS for navbar */
+.main .nav-main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main .nav-main .right {
+    display: flex;
+    padding: 0.3vh 2vw 1.5vh 2vw;
+    gap: 1vw;
+}
+
+
+.main .nav-main .right a{
+    border: 0.5px solid rgba(128, 128, 128, 0.705);
+    padding: 1.5vh 3vw 0.3vh 3vw;
+    border-radius: 35px;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.89);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    
+    /* font-family:sans-serif; */
+}
+
+.main .nav-main .right a::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    /* background-size: 100%; */
+    left: 0;
+    top:5vh;
+    opacity: 0;
+    border-radius: 50px;
+    /* padding: 0.5vh; */
+    /* top: 1vh; */
+    /* right: 1vw; */
+    /* bottom: 1vh; */
+    z-index: -10;
+
+    background-color: black;
+    position: absolute;
+    
+}
+
+
+.main .nav-main .right a:hover::before{
+    /* left: 0; */
+    top: 0;
+    opacity: 1;
+    transition: all ease-in 0.2s;
+
+}
+
+.main .nav-main .right a:hover{
+    color:white
+}
+
+
+
+
+
+/* CSS for Headline */
+.main .headline{
+    height: 70vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    margin: 8vh 0vh 0vh 0vh;
+    /* padding: 1vh 0vh 0vh 0vh; */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.521);
+
+}
+
+.main .headline .left{
+    font-family: neue-bold;
+    width: 25vw;
+    /* height: 40vh; */
+    font-size: 32px;
+    line-height: 3.5vh;
+}
+
+
+.main .headline .right{
+    font-family: neue-bold;
+    text-align: right;
+    font-size: 8vh;
+    width: 40vw;
+    line-height: 15vh;
+    padding: 0vh 5vh 0vh 0vh;
+    font-weight: bolder;
+}
