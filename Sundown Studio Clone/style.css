@@ -9,10 +9,11 @@
 }
 
 *{
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
     font-family: neue-light;
+    margin: 0.5vw;
     
 }
 
@@ -24,9 +25,11 @@ html,body{
 
 
 .main{
-    margin: 2vw;
-    /* padding: 2vw; */
+    
 }
+
+
+
 /* CSS for navbar */
 .main .nav-main{
     display: flex;
@@ -67,7 +70,7 @@ html,body{
     opacity: 0;
     border-radius: 50%;
     z-index: -1;
-
+    
     background-color: black;
     position: absolute;
     
@@ -81,7 +84,7 @@ html,body{
     /* z-index: 10; */
     border-radius: 0;
     transition: all ease-in-out 0.3s;
-
+    
 }
 
 .main .nav-main .right a:hover{
@@ -96,22 +99,20 @@ html,body{
 .main .headline{
     height: 70vh;
     width: 100%;
-    /* background-color: orange; */
     display: flex;
     justify-content: space-between;
     align-items:flex-end;
     margin: 8vh 0vh 0vh 0vh;
     padding: 1vh 0vh 5vh 0vh;
     border-bottom: 1px solid rgba(128, 128, 128, 0.521);
-
+    
 }
 
 .main .headline .left{
     font-family: neue-bold;
     width: 25vw;
-    /* height: 40vh; */
-    font-size: 32px;
-    line-height: 3.5vh;
+    font-size: 2.5vh;
+    line-height: 3vh;
 }
 
 
@@ -128,15 +129,12 @@ html,body{
 .main .video-animation-first{
     margin-top: 7vh;
     width: 100%;
-    /* position: relative; */
 }
 
 .main .video-animation-first .animation{
     height: 100%;
     width: 100%;
-    /* position: absolute; */
     z-index: -10;
-    /* background-color: red; */
 }
 
 .main .video-animation-first .animation .circle1{
@@ -150,6 +148,7 @@ html,body{
     filter: blur(20px);
     background-color: #fe3b0d;
     animation: anime1 4s infinite alternate;
+    animation-timing-function: linear;
     z-index: 0;
     /* transition: all ease-in-out; */
 }
@@ -174,6 +173,7 @@ html,body{
     filter: blur(20px);
     background-color: #fe3b0d;
     animation: anime2 4s infinite alternate;
+    animation-timing-function: linear;
     z-index: 0;
     /* transition: all ease-in-out; */
 }
@@ -182,7 +182,7 @@ html,body{
         transform:translate(0%,0%)
     }
     to{
-        transform: translate(-25%,10%);
+        transform: translate(10%,10%);
     }
 }
 
@@ -197,6 +197,7 @@ html,body{
     filter: blur(20px);
     background-color: #fe3b0d;
     animation: anime3 4s infinite alternate;
+    animation-timing-function: linear;
     z-index: 0;
     /* transition: all ease-in-out; */
 }
@@ -205,15 +206,14 @@ html,body{
         transform: translate(-10,-10);
     }
     to{
-        transform: translate(12%,25%);
+        transform: translate(10%,25%);
     }
 }
 
 .main .video-animation-first .video-player{
     width:fit-content;
-    padding: 0 2vw 0 2vw;
+    padding: 0 2vw 0 0vw;
     position: absolute;
-    /* background-color: blue; */
     z-index: 10;
 } 
 .main .video-animation-first .video-player video{
@@ -221,18 +221,199 @@ html,body{
     border-radius: 35px;
     width: 100%;
     height: 100%;
-    /* position: absolute; */
-    /* z-index: 20; */
 } 
 
 
 
 .main .marquee{
-    margin-top: 500vh;
-    background-color: orange;
-    height: 100%;
+    margin: 130vh 5vw 2vh 0;
     width: 100%;
+    overflow-x: auto; /* adds scrollbar, if data is overflowing */
+}
+
+.main .marquee .marqueeContents{
+    white-space: nowrap; /*wraps contents in single line*/
+    animation: scrollanime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.main .marquee::-webkit-scrollbar{
+    display: none;
 }
 
 
+@keyframes scrollanime{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.main .marquee .marqueeContents h1{
+    font-size: 15vh;
+    font-family: neue-bold;
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+.main .marquee .marqueeContents .dotCircle{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: #fe3b0d;
+    display: inline-block;
+    /* margin: 1vw; */
+}
+
+
+
+/*CSS for Headline 2*/
+.main .headline2{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* .main .headline2 .left{
+    white-space: nowrap;
+} */
+
+.main .headline2 .left h2{
+    font-size: 7vh;
+    font-family: neue-bold;
+    line-height: 8vh;
+    width: 60vw;
+    /* z-index: 10; */
+
+}
+
+.main .headline2 .left .animeCircle{
+    height: 550px;
+    width: 450px;
+    background: linear-gradient(#fe3b0d,#ec5527);
+    border-radius: 50%;
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    z-index: -1;
+    filter: blur(20px);
+    animation-name: animationCircle;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animationCircle{
+    from{
+        transform: translate(10%,-15%) skew(0);
+        /* skew() used to change shape*/
+    }
+    to{
+        transform: translate(-10%,15%) skew(10deg);
+    }
+}
+
+.main .headline2 .left .bulletCircle{
+    /* white-space: nowrap; */
+    display: flex;
+    margin-top: 30vh;
+}
+
+.main .headline2 .left .bulletCircle .bullet{
+    /* padding: 1vh 0vw 0vw 0vw; */
+    /* top: 60; */
+    height: 2vh;
+    width: 1vw;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fe3b0d;
+
+}
+
+.main .headline2 .left p{
+    display: inline-block;
+    font-size: 2vh;
+}
+
+/* .main .headline2 .right{
+} */
+
+.main .headline2 .right img{
+    height: 27vh;
+    width: 17vw;
+    border-radius: 8%;
+    margin-bottom: 2vh;
+    margin-right: 3vw;
+}
+
+.main .headline2 .right p{
+    margin-top: 2vh;
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 2.5vh;
+    width: 16vw;
+}
+
+/*CSS for Showcase*/
+.main .showcase{
+    margin-top: 10vh;
+    height: 10vh;
+    width: 100%;
+}
+
+.main .showcase .elem{
+    margin-right: 2vw ;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.main .showcase .elem .overlay{
+    bottom: 10vh;
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    background-color: #fe3b0d;
+    /* z-index: 10; */
+    /* opacity: 0; */
+}
+
+/*Very Imp. on how to change other div on accessing another div*/
+.main .showcase #elem1:hover :: .elem .overlay{
+    transition: all ease-in-out 0.2s;
+    bottom: 0;
+    /* opacity: 1; */
+    background-color: red;
+}
+
+.main .showcase .elem .txt1 h1{
+    font-size: 6vh;
+    font-family: neue-bold;
+    font-weight: 800;
+}
+
+/* .main .showcase .elem .txt2{
+    align-items: center;
+} */
+.main .showcase .elem .txt2 .dark{
+    font-size: 2vh;
+    font-family: neue-light;
+    font-weight: 600;
+}
+
+.main .showcase .elem .txt2 .light{
+    font-size: 2vh;
+    font-family: neue-light;
+    font-weight: 100;
+}
 
