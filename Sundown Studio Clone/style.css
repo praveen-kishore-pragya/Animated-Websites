@@ -24,10 +24,6 @@ html,body{
 }
 
 
-.main{
-    
-}
-
 
 
 /* CSS for navbar */
@@ -295,7 +291,7 @@ html,body{
 .main .headline2 .left .animeCircle{
     height: 550px;
     width: 450px;
-    background: linear-gradient(#fe3b0d,#ec5527);
+    background: linear-gradient(#fe3b0d,#e48124de);
     border-radius: 50%;
     position: absolute;
     top: 20vh;
@@ -365,6 +361,7 @@ html,body{
     margin-top: 10vh;
     height: 10vh;
     width: 100%;
+    position: relative;
 }
 
 .main .showcase .elem{
@@ -395,7 +392,7 @@ html,body{
     bottom: 0;
     position: absolute;
     opacity: 1;
-    transition: all ease 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 
 .main .showcase .elem .txt1 h1{
@@ -415,5 +412,32 @@ html,body{
     font-size: 2vh;
     font-family: neue-light;
     font-weight: 100;
+}
+
+/*This is the image that will be used on the showcase, but will be made outside of any div*/
+.main .fixedImage{
+    height: 25vw;
+    width: 20vw;
+    background-color: purple;
+    border-radius: 7%;
+    position: fixed;
+    /* is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.*/
+    top: 40%;
+    right: 30%;
+    z-index: 99;
+    display: none;
+    background-size: cover;
+    /*cover will resize the background image to make sure the element is fully covered.*/
+    background-position: center;
+    /*set the image at the center center position*/
+}
+
+.main .lastPage{
+    margin-top:100vh;
+    height: 100vh;
+    width: 100vw;
+    /* display: flex; */
+    /* align-items: flex-start; */
+    background-color: red;
 }
 
