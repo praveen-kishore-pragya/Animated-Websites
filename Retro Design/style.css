@@ -13,6 +13,17 @@
     src: url("./resources/fonts/5f242a694256f02b944d5767_EditorialNew-Light.ttf");
 }
 
+@font-face {
+    font-family: lobster;
+    src: url("./resources/fonts/LobsterTwo-Bold.ttf");
+}
+
+@font-face {
+    font-family: chomsky;
+    src: url("./resources/fonts/Chomsky.ttf");
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -20,11 +31,14 @@
 }
 
 html, body {
+    background-color: #1d1d1b;
     height: 100vh;
     width: 100vw;
-    background-color: #c3bbb2;
 }
 
+.main{
+    background-color: #c2bbb1;
+}
 .main .nav-main{
     /* background-color: blue; */
     display: flex;
@@ -38,10 +52,13 @@ html, body {
 .main .nav-main h3{
     font-family: editorial;
     font-weight: 100;
+    margin: 0 0 0 1vw;
 }
 
 .main .nav-main h2{
-    font-family: domaine;
+    font-family: chomsky;
+    font-weight: 400;
+    font-size: 3vh;
 }
 
 .main .nav-main .hamburger div{
@@ -168,4 +185,98 @@ html, body {
     font-family: canopee;
     color: #c5bdb3;
     letter-spacing: .5vw;
+}
+
+
+.main .page2{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.main .page2 .left{
+    height: 100%;
+    width: 40%;
+    margin-left: 2vw;
+    /* display: inline-block; */
+    border-right: 1px solid black;
+}
+
+.main .page2 .left .top p{
+    font-size: 12vh;
+    font-family: canopee;
+    text-align: center;
+    line-height: 15vh;
+}
+
+.main .page2 .left .top p span{
+    font-size: 20vh;
+}
+
+
+.main .page2 .left .center img{
+    height: 65vh;
+    width: 95%;
+}
+
+.main .page2 .left .bottom{
+    margin-top: 5vh;
+    height: 100%;
+    font-family: editorial;
+    /* background-color: red; */
+}
+
+.main .page2 .left .bottom p{
+    font-size: 4vh;
+}
+
+/* .main .page2 .left .bottom p span{
+    font-size: 10vh;
+    background-color: #1b1b19;
+} */
+
+.main .page2 .left .bottom p::before{
+    padding: 0 1vh;
+    content: "A";
+    font-size: 10vh;
+    font-family: lobster;
+    background-color: #1b1b19;
+    color: #c6bfb5;
+}
+
+.main .page2 .right{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 60%;
+    margin-left: 2vw;
+    display: inline-block;
+}
+
+.main .page2 .right .top img{
+    height: 80vh;
+    width: 95%;
+    border: 1px solid black;
+}
+
+.main .page2 .right .bottom{
+    margin-top: 3vh;
+}
+
+.main .page2 .right .bottom p{
+    font-size: 14vh;
+    font-family: canopee;
+    /* text-align: left; */
+}
+
+
+
+.main .page2-3{
+    height: 100vh;
+    background-color: purple;
+}
+
+.main .page2-3 .left{
+    height: 100%;
+    background-color: blue;
 }
